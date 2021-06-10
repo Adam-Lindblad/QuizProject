@@ -9,7 +9,7 @@ const bodyParser = require('body-parser');
 
 let player = [];    // En array för spelare
 let gm = '';        // Endast en GM
-let gmKey = '123noob';
+let gmKey = '123noob'; // EN kommentar
 
 app.use(cookieParser());
 app.use('/public', express.static(__dirname +'/public'));
