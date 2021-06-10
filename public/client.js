@@ -4,6 +4,8 @@ let socket = io();
 
 window.addEventListener('load', init);
 
+// Just adding a comment //
+
 function init(){
     let nameField = document.querySelector('#name');
     let userBtn = document.querySelector('#user');
