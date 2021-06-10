@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <title>Userlogin page</title>
+</head>
+<body class="bg-indigo-50">
+    <div class="flex w-auto justify-center mt-20">
+        <h1 class="text-6xl font-bold">Welcome to the Quizgame!</h1>
+    </div>
+    <form method="POST" enctype="application/x-www-form-urlencoded">
+        <div class="flex justify-center mt-24">
+            <h2 class="text-3xl mx-4">Please enter your name:</h2>
+            <input type="text" name="name" id="name" class="outline-none bg-white rounded-md text-2xl px-1 w-40 border border-black focus:ring-2 focus:ring-black transision ease-linear duration-75">
+        </div>
+        <div class="flex flex-col items-center w-auto mt-24">
+            <a href="/gamepage.html" id="user" class="bg-gray-300 hover:bg-blue-200 w-96 mb-4 py-8 rounded-xl text-6xl text-center"> User</a>
+            <button id="gameMaster" class="bg-gray-300 hover:bg-blue-200 w-96 px-8 py-8 rounded-xl text-6xl z-20">Gamemaster</button>
+            <div id="hidden" class="bg-blue-200 w-96 flex-col items-center relative z-10 rounded-b-xl hidden">
+                <input type="password" name="gmID" id="gmID" class="outline-none bg-white rounded-md shadow-md text-2xl mt-6 px-1 w-40 focus:ring-2 focus:ring-black transision ease-linear duration-75">
+                <button type="submit" id="gmHiddenBtn" class="bg-red-900 hover:bg-red-800 my-2 px-4 py-2 rounded-md font-bold shadow-md">Login</a>
+            </div>
+        </div>
+    </form>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/public/client.js"></script>
+</body>
+</html>

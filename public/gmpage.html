@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <title>Quizzz!</title>
+</head>
+<body class="bg-indigo-50">
+    <div class="w-auto flex justify-center">
+        <h2 id="gmName" class="text-4xl mt-4 font-bold"></h2>
+    </div>
+    <div class="flex mt-40">
+        <table class="min-w-min table-fixed mx-10 border-collapse border border-black text-xl">
+            <thead>
+                <tr class="bg-indigo-100">
+                    <th class="w-6/12 border border-black">Playername</th>
+                    <th class="w-2/12 border border-black">Points</th>
+                    <th class="w-2/12 border border-black">Correct</th>
+                    <th class="w-2/12 border border-black">Wrong</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Blöö gmapp.js lägger till yo -->
+            </tbody>
+            
+        </table>
+        <div class="max-w-full mx-auto">
+            <div class="flex justify-center mb-10">
+                <div>
+                    <label for="question" class="text-2xl mx-4">Question:</label>
+                    <input type="text" name="question" id="question" class="w-96 text-2xl p-2 rounded outline-none focus:ring-1 ring-black">
+                </div>
+            </div>
+            <div class="grid grid-flow-row grid-cols-2 grid-rows-2 gap-10">
+                <div>
+                    <label for="alt1" class="text-2xl mx-4">Alt 1:</label>
+                    <input type="text" name="alt1" id="alt1" class="w-96 text-2xl p-2 rounded outline-none focus:ring-1 ring-black">
+                </div>
+                <div>
+                    <label for="alt2" class="text-2xl mx-4">Alt 2:</label>
+                    <input type="text" name="alt2" id="alt2" class="w-96 text-2xl p-2 rounded outline-none focus:ring-1 ring-black">
+                </div>
+                <div>
+                    <label for="alt3" class="text-2xl mx-4">Alt 3:</label>
+                    <input type="text" name="alt3" id="alt3" class="w-96 text-2xl p-2 rounded outline-none focus:ring-1 ring-black">
+                </div>
+                <div>
+                    <label for="alt4" class="text-2xl mx-4">Alt 4:</label>
+                    <input type="text" name="alt4" id="alt4" class="w-96 text-2xl p-2 rounded outline-none focus:ring-1 ring-black">
+                </div>
+            </div>
+            <div class="flex justify-center mt-10">
+                <button id="submit" class="bg-green-500 hover:bg-green-400 px-14 py-5 rounded-xl shadow-md font-bold text-xl focus:outline-none">Submit</button>
+            </div>
+
+        </div>
+    </div>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/public/gmapp.js"></script>
+</body>
+</html>
