@@ -1,10 +1,10 @@
 {
   "name": "quizgame-project",
   "version": "1.0.0",
-  "description": "",
   "main": "server.js",
   "scripts": {
-    "build-css": "tailwindcss build src/twstyle.css -o public/style.css"
+    "build-css": "tailwindcss build src/twstyle.css -o public/style.css",
+    "start": "node server.js"
   },
   "author": "Adam Lindblad",
   "license": "ISC",
@@ -15,5 +15,14 @@
     "express": "^4.17.1",
     "socket.io": "^4.1.2",
     "tailwindcss": "^2.1.2"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Adam-Lindblad/QuizProject.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Adam-Lindblad/QuizProject/issues"
+  },
+  "homepage": "https://github.com/Adam-Lindblad/QuizProject#readme",
+  "description": ""
 }

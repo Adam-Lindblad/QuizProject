@@ -9,7 +9,7 @@ const bodyParser = require('body-parser');
 
 let player = [];    // En array för spelare
 let gm = '';        // Endast en GM
-let gmKey = '123noob'; // EN kommentar
+let gmKey = '123noob';
 
 app.use(cookieParser());
 app.use('/public', express.static(__dirname +'/public'));
@@ -20,7 +20,16 @@ http.listen(3000,()=>{
 });
 
 app.get('/', (req, res)=>{
-    res.redirect('/userlogin.html');
+
+    if(req.headers.cookie === 'gamemaster=true'){
+        res.sendFile(__dirname +'/public/gmpage.html');
+        let timer = setInterval(() => {
+            io.emit('gmData', {"gameMaster": gm, "players": player});
+        clearInterval(timer);
+        }, 1000);
+    } else {            // Fortsätt att kolla om kakor finns för "spelarna" och ta dom till 'gamepage.html' isåfall //
+        res.redirect('/userlogin.html');
+    }
 });
 
 app.get('/userlogin.html', (req, res)=>{
